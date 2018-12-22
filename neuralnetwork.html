@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html lang="en">
+<!-- Head information -->    
+<head>
+    <meta charset="utf-8">
+
+    <title>Sky | Moodslider</title>
+    <meta name="description" content="Find content to match your mood">
+    <meta name="author" content="Sky | Aaron Walker">
+
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+    <!-- Links to style sheets -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Links to JS scripts -->
+    <script src="js/neuralnetwork.js"></script>
+</head>
+ 
+<body>
+    <div class="center-test">
+        <div class="header">
+            <div class="logo">
+                <img src="img/sky-logo.png" alt="Sky logo" height="70">
+            </div>
+            <div class="title">
+                <h1>Neural Network Example</h1>
+            </div>
+        </div>
+        <div class="slider-wrapper">
+            <!-- Slider label - left -->    
+            <div class="slider-label-col">
+                <li class="slider-label">Agitated</li>
+                <li class="slider-label">Happy</li>
+                <li class="slider-label">Tired</li>
+                <li class="slider-label">Scared</li>
+            </div>
+            <!-- Mood sliders -->
+            <div class="slider-col">
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="50" value="25" class="slider" id="input1">
+                </div>
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="50" value="25" class="slider" id="input2">
+                </div>
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="50" value="25" class="slider" id="input3">
+                </div>
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="50" value="25" class="slider" id="input4">
+                </div>
+            </div>
+            <!-- Slider label - right -->  
+            <div class="slider-label-col">
+                <li class="slider-label">Calm</li>
+                <li class="slider-label">Sad</li>
+                <li class="slider-label">Wide Awake</li>
+                <li class="slider-label">Fearless</li>
+            </div>
+        </div><br>
+        <div class="neuralnetbutton">
+            <li class="nav-li"><a onclick="neuralnet()">Predict</a></li><br>
+            <br><p>Probability you'll like programme X: <strong id="updateMe">N/A</strong>%</p>
+        </div>
+        <div class="infoBox">
+            <h2>Neural Network:</h2>
+            <p>This is the neural network test page. Enter some values using the slider and click the "Predict"
+                button to make a prediction. Due to time constraints, there is no backwards propagation function 
+                to train the network so the output will be random. 
+            </p>
+        </div>
+    </div>
+</body>
